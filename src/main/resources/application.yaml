@@ -3,9 +3,4 @@ spring:
     name: user-service
 
   config:
-    import: "configserver:"
-
-  cloud:
-    config:
-      uri: http://localhost:9000
-
+    import: "configserver:http://10.148.0.4:9000"
