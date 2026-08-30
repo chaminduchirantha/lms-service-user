@@ -13,10 +13,10 @@ import java.lang.annotation.Documented;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-@Document(collection = "books")
+@Document(collection = "users")
 public class User {
     @Id
-    private Long id;
+    private String id;
     private String userName;
     private String email;
     private String password;
