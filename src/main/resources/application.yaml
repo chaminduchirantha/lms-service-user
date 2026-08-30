@@ -1,6 +1,15 @@
 spring:
   application:
     name: user-service
-
+  data:
+    mongodb:
+      uri: mongodb://root:SNMVrMjHKfY3aha5DL0IEtAIltCtoOnljC4UJtQn5MBq2-Pq@d3c8708c-f2f6-4cb7-a935-89412ab7fde2.asia-southeast1.firestore.goog:443/db-lms?loadBalanced=true&tls=true&authMechanism=SCRAM-SHA-256&retryWrites=false
   config:
     import: "configserver:http://10.148.0.4:9000"
+
+server:
+  port: 0
+
+eureka:
+  instance:
+    instanceId: ${spring.application.name}:${vcap.application.instance_id:${spring.application.instance_id:${random.value}}}
